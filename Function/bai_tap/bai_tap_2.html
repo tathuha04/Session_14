@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển đổi giữa feet và mesters</title>
+</head>
+
+<body>
+    <label for="">Độ dài feet :</label>
+    <input type="number" id="inputF" placeholder="feet" onclick="feetToMeter(this.value)"
+        onchange="feetToMeter(this.value)">
+    <p>Độ dài mester : <span id="outputM"></span></p>
+
+    <script>
+        function feetToMeter(feet) {
+            document.getElementById("outputM").innerHTML = feet * 0.305;
+        }
+
+    </script>
+
+
+
+    <br><br><br><br><br>
+
+
+
+    <label for="">Độ dài met :</label>
+    <input type="number" id="inputM" placeholder="met" onclick="mesterToFeet(this.value)"
+        onchange="mesterToFeet(this.value)">
+    <p>Độ dài feet : <span id="outputF"></span></p>
+
+    <script>
+        function mesterToFeet(met) {
+            document.getElementById("outputF").innerHTML = met * 3.2787;
+        }
+
+    </script>
+
+</body>
+
+</html>
