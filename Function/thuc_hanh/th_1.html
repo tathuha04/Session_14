@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo và gọi hàm</title>
+</head>
+
+<body>
+    <script>
+        function processConfirm(answer) {
+            let result = "";
+            if (answer) {
+                result = "ok.Vô game đi";
+                console.log(result);
+            }
+            else {
+                result = "thế t chơi trước nhé";
+               console.log(result);
+            }
+            return result;
+        }
+
+        let confirmAnswer = confirm("Alo!Chơi game không?"); //confirm : xác nhận
+        let theAnswer = processConfirm(confirmAnswer); // process confirm : quá trình xác nhận
+        alert(theAnswer);
+    </script>
+</body>
+
+</html>

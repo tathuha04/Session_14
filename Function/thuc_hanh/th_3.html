@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm giá trị nhỏ nhất của mảng</title>
+</head>
+
+<body>
+    <script>
+        // tạo hàm
+        function minArray(arr) {
+              if (arr.length == 0)  //b5
+                    return -1;      //b5
+            // gs phần tử đầu tiên trong mảng là GTNN.
+            // gán giá trị của phần tử cho biến min
+            let min = arr[0];
+            for (var i = 1; i < arr.length; i++) { // duyệt mảng từ phần tử tiếp theo,kiểm tra nếu giá trị phần tử tiếp theo trong mảng nhỏ hơn min thì gán min = arr[i](i là ptu tiếp theo)
+                if (arr[i] < min) {
+                    min = arr[i];
+                }
+            }
+            return min;
+
+        }
+        // let arr1 = [3, 5, 1, 8, -3, 7, 8];
+        // let min = minArray(arr1);
+        // alert(min);
+
+
+
+        // let arr2 = [7, 12, 6, 9, 20, 56, 89];
+        // let min = minArray(arr2);
+        // alert(min);
+
+        let arr3 = [];
+        let min = minArray(arr3);
+        alert(min); // vì mảng không phần tử nào nên min sẽ trả về gt -1
+
+
+        // let arr4 = [0, 0, 0, 0, 0, 0];
+        // let min = minArray(arr4);
+        // alert(min);
+
+    </script>
+</body>
+
+</html>
