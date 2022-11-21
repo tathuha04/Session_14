@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhập hàm vào 2 tsố. Nếu ts1 > ts2 ---> hiển thị hộp thoại thông báo cho người dùng
+        ts1 nhỏ hơn/= ts2 ---> trả về tổng 2 ts.
+    </title>
+</head>
+
+<body>
+    <script>
+        function isCompare(a, b) {
+            if (a > b) {
+                return "Tham số thứ nhất lớn hơn tham số thứ hai"
+            }
+            else {
+                let sum = a + b;
+                return sum;
+            }
+        }
+
+        let num1 = parseInt(prompt("Nhập tham số thứ nhất: "));
+        let num2 = parseInt(prompt("Nhập vào tham số thứ hai: "));
+        alert(isCompare(num1, num2)) //gọi lại hàm ở bên ngoài thẻ function
+
+
+    </script>
+</body>
+
+</html>

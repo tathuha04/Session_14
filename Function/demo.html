@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ví dụ về tham chiếu và tham trị</title>
+</head>
+
+<body>
+    <script>
+        /// THAM TRỊ ///
+
+        let a = 1;
+        let b = a;
+
+        a = 2;
+
+        document.write(a + "," + b);  // 2 , 1     --->chỉ thay đổi giá trị của a 
+
+        // ---------------------------------------------------------------------------
+        document.write("<br>")
+        document.write("<br>")
+        document.write("<br>")
+        // ---------------------------------------------------------------------------
+
+        /// THAM TRỊ ///
+
+        let num1 = [6, 11];
+        let num2 = num1;
+
+        num1[0] = 10;
+
+        document.write(num2);   // [10,11]  ---> thay đổi cả địa chỉ của num1 nên giá trị num2 thay đổi theo num1
+    </script>
+</body>
+
+</html>

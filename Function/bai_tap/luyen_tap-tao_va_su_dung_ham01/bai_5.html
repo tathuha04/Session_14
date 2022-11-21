@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let find = prompt("Nhập tên ngôi sao cần tìm: ");
+        let arr1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let arr2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+        let result = "";
+        function findStar() {
+            // duyệt mảng thứ nhất để tìm tên ngôi sao
+            for (i = 0; i < arr1.length; i++) {
+                if (find == arr1[i]) {
+                    result = arr2[i];
+                    // tìm thấy --> trả lại giá trị tương ứng với chỉ số đó ở mảng 2
+                    document.write(result);
+                } else {
+                    // không tìm thấy --> hiển thị kết quả ra màn hình
+                    alert("Không tìm thấy");
+                }
+            }
+        } findStar()
+    </script>
+</body>
+
+</html>
