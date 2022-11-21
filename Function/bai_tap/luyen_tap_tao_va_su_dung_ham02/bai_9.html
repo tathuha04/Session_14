@@ -9,18 +9,29 @@
 </head>
 
 <body>
+    <!-- <button onclick="checkCharacter()">onclick</button> -->
+
     <script>
-        arr1 = ["h", 1, "a", 1, "h", 6, 4, "t", "a", 0, "h"];
-        arr2 = prompt([]);
+        let character = prompt("Nhập ký tự để kiểm tra xem có trong mảng không?");
+         function checkCharacter() {
+        let str = "Hello World";
+        let array = str.split("");
+        console.log(array);
+        let count = 0;
+        let check = false;
 
-        // kiểm tả kí tự trong mảng arr2 có nằm trong mảng arr1 không
+        for (let i = 0; i < array.length; i++) {
+            if (character.toLowerCase() == array[i].toLowerCase()) {
+                count += 1;
+                check = true;
+            }
+        }
+        if (check == false) {
+            count = -1
+        }
+        alert(count);
+    }checkCharacter();
 
-
-        // Nếu có ---> trả về số lần xuất hiện của kí tự
-
-
-        // Nếu không --> trả về -1
-        
     </script>
 </body>
 
