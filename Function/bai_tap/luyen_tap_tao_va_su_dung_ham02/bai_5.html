@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhập 3 số nguyên bất kì, trả về số nguyên có giá trị nhỏ nhất</title>
+</head>
+
+<body>
+    <script>
+        let a = parseInt(prompt("nhập số nguyên a"))
+        let b = parseInt(prompt("Nhập số nguyên b"))
+        let c = parseInt(prompt("Nhập số nguyên c"))
+
+        function findMin() {
+            min = a;
+            if ((min < b), (min < c)) {
+                alert(" Min = " + a)
+            } else if (b < c) {
+                alert("Min = " + b);
+            } else {
+                alert("Min = " + c);
+            }
+        }
+        findMin();
+    </script>
+</body>
+
+</html>

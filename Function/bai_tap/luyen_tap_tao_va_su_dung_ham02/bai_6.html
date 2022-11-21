@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kiểm tả số nhập vào có phải số nguyên dương hay không.
+        đúng -->true
+        sai --> false
+    </title>
+</head>
+
+<body>
+    <script>
+        let a = prompt("Nhập vào số a:");
+        function checknumber() {
+           let result = Math.sign(a);
+          if (result ==1){
+            alert(a+"  là số nguyên dương");
+          }
+          else if (result == -1){
+            alert(a +" là số nguyên âm")
+          }
+          else{
+            alert(a + " không phải là số")
+          }
+        }
+        checknumber();
+    </script>
+</body>
+
+</html>

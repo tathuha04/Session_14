@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tính diện tích , chu vi hình tròn.</title>
+</head>
+
+<body>
+    <script>
+        let r = prompt("Nhập bán kính hình tròn:")
+        function area() {
+           let S = r * r * Math.PI;
+             alert("Diện tích hình tròn =" +S);
+        }
+        area();
+
+        function perimeter(){
+           let C = r*2*Math.PI;
+           alert("Chu vi hình tròn =" +C);
+        }
+        perimeter();
+
+    </script>
+</body>
+
+</html>

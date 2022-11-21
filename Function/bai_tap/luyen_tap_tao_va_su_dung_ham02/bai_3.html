@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính giai thừa của 1 số nguyên bất kì
+    </title>
+</head>
+
+<body>
+    <script>
+        let n = parseInt(prompt("nhập vào một số tự nhiên dương bất kì:"));
+        let factorial = 1;
+        function isfactorial() {
+            for (i = 1; i <= n; i++) {
+                factorial = factorial * i;
+                document.write("  " + factorial);
+            }
+        }
+        isfactorial();
+    </script>
+</body>
+
+</html>
