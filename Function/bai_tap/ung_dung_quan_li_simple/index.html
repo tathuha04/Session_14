@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 600px;
+            margin: 0 auto;
+            /* background-color: #eee; */
+            padding: 12px
+        }
+
+        .add {
+            background-color: #ddd;
+            width: 70%;
+            text-align: center;
+            padding: 8px;
+        }
+
+        .save {
+            background-color: #ddd;
+            width: 70%;
+            text-align: center;
+            padding: 8px;
+        }
+
+        input {
+            width: 300px;
+            height: 24px;
+            /* border: none; */
+            text-align: left;
+
+        }
+
+        button {
+            background-color: rgb(9, 176, 9);
+            color: #fff;
+            border: 2px solid rgb(137, 136, 136);
+            width: 60px;
+            height: 30px;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            cursor: pointer;
+            background-color: rgb(6, 105, 6);
+
+        }
+
+        table tr:nth-child(odd) {
+            background-color: #ddd;
+        }
+
+        table th {
+            background-color: #fff;
+        }
+
+        table {
+            width: 400px;
+            border: none;
+        }
+        table td button{
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Add New Product</h2>
+    <input type="text" id="addProduct" placeholder="New Product">
+    <button onclick="addProduct()">Add</button>
+    <br><br>
+
+    <input type="text" id="editProduct">
+    <button onclick="save()">Save</button>
+    <br><br><br>
+
+    <h2>Display All Product</h2>
+    <div id="displayProduct"></div>
+</body>
+
+<script>
+    //B1: Tạo mảng
+    let arrayProduct = ["Sony Xperia", "Samsung Galaxy", "Nokia 6", "Xiaomi Redmi Note 4", "Apple iPhone 6S"];
+
+    //B2: Tạo hàm hiển thị danh sách sản phẩm
+    function displayProduct() {
+        //B1: Tạo bảng table
+        let tableProduct = '<table border="1" cellspacing="1">'
+            + '<tr>'
+            + '<th>Stt</th>'
+            + '<th>Product name</th>'
+            + '<th colspan="2">Action</th>'
+            + '</tr>'
+        for (let i = 0; i < arrayProduct.length; i++) {
+            tableProduct += '<tr>'
+                + '<td>' + (i + 1) + '</td>'
+                + '<td>' + arrayProduct[i] + '</td>'
+                + '<td> <button onclick="editProduct(' + i + ')">Edit</button></td>'
+                + '<td> <button onclick="deleteProduct(' + i + ')">Delete</button></td>'
+                + '</tr>'
+        }
+
+        tableProduct += '</table>'
+        document.getElementById("displayProduct").innerHTML = tableProduct
+    }
+    displayProduct();
+
+
+    /////////           HÀM THÊM SẢN PHẨM          ///////////////
+    function addProduct() {
+        //B1: Tạo biến lưu trữ giá trị của ô input add
+        let addNewProduct = document.getElementById("addProduct").value;
+
+        //B2: Thêm giá trị mới vừa nhập ở ô input vào mảng
+        arrayProduct.push(addNewProduct);
+
+        //B3: Tạo lại bảng sao khi sau khi đã thêm dữ liệu mới
+        displayProduct();
+    }
+
+
+    /////////           HÀM Delete SẢN PHẨM          ///////////////
+
+    function deleteProduct(i) {
+        //B1: Dùng hàm splice để xóa phần tử được chỉ định trong mảng
+        arrayProduct.splice(i, 1);
+
+        //B2: Tạo lại bảng sao khi sau khi đã thêm dữ liệu mới
+        displayProduct();
+    }
+
+    /////////           HÀM Edit SẢN PHẨM          ///////////////
+
+    var value = ""; //Khai báo biến toàn cục để lưu vị trí nút edit đã dc chọn
+
+    function editProduct(i) {
+        document.getElementById("editProduct").value = arrayProduct[i];
+        value = i
+    }
+
+    function save() {
+        let newEdit = document.getElementById("editProduct").value;
+        arrayProduct[value] = newEdit;
+
+        //B2: Tạo lại bảng sao khi sau khi đã thêm dữ liệu mới
+        displayProduct();
+    }
+
+
+</script>
+
+</html>
